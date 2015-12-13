@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <title>Movies</title>
+	    <link rel="stylesheet" href="/index.css">
+
+	  </head>
+
+	  <body>
+	    <h2>Movies</h2>
+	        <ul>
+            <% @movies.each do |movie| %>
+            <p>
+	            <li>
+	              <a href="/movies/<%= movie.id %>"><%= movie.title %></a>
+                  <ul>
+                    <li> Year: <%= movie.year %> </li>
+                    <li> Rating: <%= movie.rating %> </li>
+                    <li> Genre: <%= movie.genre %> </li>
+                    <li> Studio: <%= movie.studio %> </li>
+                  </ul>
+	            </li>
+            </p>
+    	      <% end %>
+	        </ul>
+	  </body>
+	</html>

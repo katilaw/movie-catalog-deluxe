@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+	<html lang="en">
+	  <head>
+	    <title>Actors</title>
+	    <link rel="stylesheet" href="/index.css">
+
+	  </head>
+
+	  <body>
+	    <h2><%= @actor.name %>'s Movie Profile</h2>
+	        <ul>
+            <% @actor_details.each do |actor| %>
+	            <li>
+	              <a href="/movies/<%= actor["id"] %>"> Movie: <%= actor["title"] %></a>
+                  <ul>
+                    <li> Character Role: <%= actor["character"] %> </li>
+                  </ul>
+	            </li>
+    	      <% end %>
+	        </ul>
+	  </body>
+	</html>
